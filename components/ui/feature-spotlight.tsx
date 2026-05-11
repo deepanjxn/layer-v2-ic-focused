@@ -33,7 +33,7 @@ const AnimatedFeatureSpotlight = React.forwardRef<HTMLElement, AnimatedFeatureSp
       <section
         ref={ref}
         className={cn(
-          'w-full max-w-6xl mx-auto p-8 md:p-12 rounded-2xl bg-background border overflow-hidden',
+          'w-full p-8 md:p-12 rounded-2xl bg-background border overflow-hidden',
           className
         )}
         aria-labelledby="feature-spotlight-heading"

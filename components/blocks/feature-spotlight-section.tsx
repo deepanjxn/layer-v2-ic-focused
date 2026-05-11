@@ -3,7 +3,8 @@ import { BarChart3 } from 'lucide-react'
 
 export default function FeatureSpotlightSection() {
   return (
-    <div className="px-6 py-16 md:py-24 border-b">
+    <div className="py-16 md:py-24 border-b">
+      <div className="container">
       <AnimatedFeatureSpotlight
         preheaderIcon={<BarChart3 className="size-4 text-primary" />}
         preheaderText="Real-time visibility"
@@ -20,6 +21,7 @@ export default function FeatureSpotlightSection() {
         imageUrl="/images/hero-image.png"
         imageAlt="Layer dashboard showing real-time leadership metrics"
       />
+      </div>
     </div>
   )
 }

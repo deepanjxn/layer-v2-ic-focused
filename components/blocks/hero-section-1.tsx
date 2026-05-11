@@ -82,7 +82,7 @@ export function HeroSection() {
                             />
                         </AnimatedGroup>
                         <div aria-hidden className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]" />
-                        <div className="mx-auto max-w-6xl px-6">
+                        <div className="container">
                             <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                                 <AnimatedGroup variants={transitionVariants}>
                                     <h1 className="mt-8 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">
@@ -147,7 +147,7 @@ export function HeroSection() {
                                     aria-hidden
                                     className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                                 />
-                                <div className="bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-black/10 ring-1 ring-border">
+                                <div className="bg-background relative overflow-hidden rounded-2xl border p-4 shadow-lg shadow-black/10 ring-1 ring-border">
                                     <img
                                         className="relative rounded-2xl w-full h-auto object-contain"
                                         src="/images/hero-image.png"
@@ -162,7 +162,7 @@ export function HeroSection() {
                     </AuroraBackground>
                 </section>
                 <section className="bg-background pb-16 pt-16 md:pb-32 border-b">
-                    <div className="group relative m-auto max-w-6xl px-6">
+                    <div className="group relative container">
                         <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
                             <Link
                                 href="/"

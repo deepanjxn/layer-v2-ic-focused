@@ -57,7 +57,7 @@ const features: BentoFeature[] = [
 export default function WhatYouCanBuild() {
   return (
     <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="container">
         <div className="mb-12">
           <h2 className="text-4xl font-medium text-foreground">What you can build</h2>
           <p className="mt-4 text-text-secondary text-lg max-w-xl">

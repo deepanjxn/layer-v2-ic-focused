@@ -14,7 +14,7 @@ export default function FeaturesSection() {
     return (
         <section className="border-b">
             <div className="py-24">
-                <div className="mx-auto w-full max-w-6xl px-6">
+                <div className="container">
                     <div className="mb-12">
                         <h2 className="text-foreground max-w-2xl text-balance text-4xl font-semibold">
                             For Leadership

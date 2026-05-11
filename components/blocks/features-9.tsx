@@ -6,8 +6,9 @@ import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } f
 
 export function Features() {
     return (
-        <section className="px-6 py-16 md:py-32 border-b">
-            <div className="mx-auto grid max-w-6xl border rounded-3xl overflow-hidden md:grid-cols-2">
+        <section className="py-16 md:py-32 border-b">
+            <div className="container">
+            <div className="grid w-full border rounded-3xl overflow-hidden md:grid-cols-2">
                 <div>
                     <div className="p-6 sm:p-12">
                         <span className="text-muted-foreground flex items-center gap-2">
@@ -75,6 +76,7 @@ export function Features() {
                     </div>
                     <MonitoringChart />
                 </div>
+            </div>
             </div>
         </section>
     )

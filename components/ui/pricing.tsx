@@ -135,7 +135,7 @@ export default function PricingSection() {
 
   return (
     <div
-      className="px-6 pt-36 pb-24 min-h-screen max-w-6xl mx-auto relative"
+      className="container pt-36 pb-24 min-h-screen relative"
       ref={pricingRef}
     >
       <article className="text-left mb-10 space-y-6 max-w-2xl">

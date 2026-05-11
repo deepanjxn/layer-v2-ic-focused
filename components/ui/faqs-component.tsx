@@ -34,7 +34,7 @@ const faqItems = [
 export default function FAQs() {
     return (
         <section className="py-16 md:py-24">
-            <div className="mx-auto max-w-6xl px-6">
+            <div className="container">
                 <div className="grid gap-8 md:grid-cols-5 md:gap-12">
                     <div className="md:col-span-2">
                         <h2 className="text-foreground text-4xl font-medium">FAQs</h2>
