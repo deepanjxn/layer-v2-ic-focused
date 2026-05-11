@@ -1,10 +1,19 @@
+import PricingSection from "@/components/ui/pricing";
+import WhatYouCanBuild from "@/components/blocks/what-you-can-build";
+import FAQs from "@/components/ui/faqs-component";
+
 export default function PricingPage() {
   return (
-    <div className="flex flex-1 items-center justify-center">
-      <div className="text-center">
-        <p className="text-sm font-medium text-black/40 uppercase tracking-widest mb-3">Page</p>
-        <h1 className="text-4xl font-semibold text-black">Pricing</h1>
+    <>
+      <div className="border-b">
+        <PricingSection />
       </div>
-    </div>
+      <div className="border-b">
+        <WhatYouCanBuild />
+      </div>
+      <div className="border-b">
+        <FAQs />
+      </div>
+    </>
   );
 }
