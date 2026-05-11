@@ -1,26 +1,131 @@
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+/* Force class-based dark mode — since we never add .dark, dark: utilities never fire */
+@variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ── Design tokens ─────────────────────────────── */
+  --radius: 0.5rem;
+
+  /* Base */
+  --color-base-black: #020100;
+  --color-base-white: #FFFFFF;
+  --color-brand: #F45523;
+
+  /* Text */
+  --color-text-primary: #020100;
+  --color-text-secondary: #606060;
+  --color-text-tertiary: #8D8D8D;
+
+  /* Accent */
+  --color-accent-green: #00DA7C;
+
+  /* Gray */
+  --color-gray-50: #F9F9F9;
+  --color-gray-100: #EEEEEE;
+  --color-gray-200: #DEDEDE;
+
+  /* Orange */
+  --color-orange-50: #FAEDE9;
+  --color-orange-100: #FCCCBD;
+  --color-orange-200: #F9A286;
+
+  /* ── Semantic aliases (used by shadcn components) ─ */
+  --background: var(--color-base-white);
+  --foreground: var(--color-text-primary);
+  --primary: var(--color-brand);
+  --primary-foreground: var(--color-base-white);
+  --secondary: var(--color-gray-100);
+  --secondary-foreground: var(--color-text-primary);
+  --muted: var(--color-gray-50);
+  --muted-foreground: var(--color-text-tertiary);
+  --accent: var(--color-orange-50);
+  --accent-foreground: var(--color-text-primary);
+  --destructive: #ef4444;
+  --destructive-foreground: var(--color-base-white);
+  --border: rgba(222, 222, 222, 0.7);
+  --input: rgba(222, 222, 222, 0.7);
+  --ring: var(--color-brand);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Design tokens — direct values so opacity modifiers (bg-brand/50) work */
+  --color-base-black: #020100;
+  --color-base-white: #FFFFFF;
+  --color-brand: #F45523;
+
+  --color-text-primary: #020100;
+  --color-text-secondary: #606060;
+  --color-text-tertiary: #8D8D8D;
+
+  --color-accent-green: #00DA7C;
+
+  --color-gray-50: #F9F9F9;
+  --color-gray-100: #EEEEEE;
+  --color-gray-200: #DEDEDE;
+
+  --color-orange-50: #FAEDE9;
+  --color-orange-100: #FCCCBD;
+  --color-orange-200: #F9A286;
+
+  /* Semantic aliases — direct values for reliable Tailwind utility generation */
+  --color-background: #FFFFFF;
+  --color-foreground: #020100;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #020100;
+  --color-primary: #F45523;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #EEEEEE;
+  --color-secondary-foreground: #020100;
+  --color-muted: #F9F9F9;
+  --color-muted-foreground: #8D8D8D;
+  --color-accent: #FAEDE9;
+  --color-accent-foreground: #020100;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: rgba(222, 222, 222, 0.7);
+  --color-input: rgba(222, 222, 222, 0.7);
+  --color-ring: #F45523;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*, *::before, *::after {
+  border-color: var(--color-border);
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 64px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@theme inline {
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-float: float 3s ease-in-out infinite;
 }
