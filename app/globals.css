@@ -110,7 +110,8 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 64px;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
 body {
